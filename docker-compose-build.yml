@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nextjs:
+    build: ./
+    image: dnadpscontainerregistry.azurecr.io/test/nextjs-test
+  nginx:
+    build: ./nginx
+    image: dnadpscontainerregistry.azurecr.io/nextjs-nginx
+    ports:
+      - 80:80
